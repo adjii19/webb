@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANELL KU</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+</head>
+<body 
+    style="background-image: url(https://images2.alphacoders.com/108/1083131.jpg); background-size: cover; background-position: center;"
+    class="flex justify-center h-screen items-center"
+>
+
+    <!-- Kartu Ucapan -->
+    <div class="bg-white border px-10 py-8 border-4 border-gray-300 shadow-lg shadow-blue-300 rounded-xl text-center animate__animated animate__backInDown m-8 w-80"
+        id="kartu"
+    >
+        <h1 class="text-2xl">Happy Birthday 🎉</h1>
+        <h1 class="text-2xl text-blue-500 font-bold text-center animate__animated animate__pulse animate__infinite">
+            ANELL CINTAKUU ❤️
+        </h1>
+        <button class="p-2 bg-blue-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada"
+            onclick="ubah()"
+        >
+            KLIK DISINIII !!
+        </button>
+    </div>
+
+    <!-- Script untuk Animasi dan Interaksi -->
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    <script>
+        // Konfigurasi confetti
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 },
+        });
+
+        let kartu = document.getElementById("kartu");
+
+        // Fungsi untuk mengubah isi kartu
+        function ubah() {
+            kartu.innerHTML = `
+                <h1 class="font-semibold text-wrap w-full animate__animated animate__zoomIn">
+                    HAPPY BIRTHDAYY ANELIA 🎉🎊, sayangku💕! Hari ini aku cuma mau bilang, aku bersyukur banget punya kamu di hidupku. Kamu itu sumber senyumku, semangatku, dan alasan aku terus maju. Setiap hari bersamamu selalu bikin aku merasa jadi orang paling beruntung di dunia.🎈🎈🎂🎈🎈
+                    BE HAPPY AND WISH YOU ALL THE BEST!!
+                </h1>
+                <audio autoplay><source src="suara.mp3" type="audio/mp3"/></audio>
+                <button class="p-2 bg-blue-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="next()">
+                    NEXT 🫣 !!
+                </button>
+            `;
+        }
+
+        // Fungsi untuk tahap berikutnya
+        function next() {
+            kartu.innerHTML = `
+                <h1 class="font-semibold text-wrap w-full animate__animated animate__zoomIn">
+                    Di ulang tahunmu ini, aku doain kamu selalu sehat, bahagia, dan dikelilingi sama orang-orang yang sayang sama kamu🥰. Semoga semua mimpi-mimpi kamu bisa tercapai dan langkah-langkahmu selalu dimudahkan💕. Jangan pernah ragu sama dirimu sendiri ya, karena kamu itu luar biasa, dan aku sangat percaya kamu bisa lakukan apa pun yang kamu mau.💐💐  
+                </h1>
+
+                <h1 class="font-semibold text-wrap w-full animate__animated animate__zoomIn">
+    I LOVEE YOUU MOREE ANELIAA😘😘
+    🤍❤️🤍🩵🤍❤️🩵🤍❤️
+</h1>
+<button class="p-2 bg-blue-600 text-white rounded mt-5 hover:bg-blue-900 transition ease-in w-full animate__animated animate__delay-1s animate__tada" onclick="foto()">
+                    NEXT 🫣 !!
+                </button>
+                
+            `;
+        }
+    
+        function foto() {
+           kartu.innerHTML = ` <div class="photo-container">
+        <img src="WhatsApp Image 2024-11-23 at 19.47.36.jpeg" alt="Foto">
+    </div>
+    <h1>
+    SAYAANGG MAU APAA DARII AKUU❤️❤️??
+    
+    `;
+        }
+    </script>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .photo-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+            width: 200px;
+            height: 300px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transform: rotate(-10deg);
+            transition: transform 0.3s ease;
+        }
+
+        .photo-container:hover {
+            transform: rotate(0deg);
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+
+</body>
+</html>
